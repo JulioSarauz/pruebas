@@ -14,14 +14,14 @@ export class ProductsController {
     @Post()
     async create(@Body() prodDto: ProdDto) { 
         const prod = new ProdDto();
-        prod.name=prodDto.name;
-        prod.age=prodDto.age;
+        prod.nombre=prodDto.nombre;
+        prod.descripcion=prodDto.descripcion;
         const errores = await validate(prod);
         if(errores.length === 0)
          this.prodservice.guardarProducto(prodDto);
 
 
-        return prodDto.age;
+        return prodDto;
     }
 
     @Get(':id')

@@ -12,8 +12,10 @@ export class ProductsService {
 
     guardarProducto(prod:ProdDto):ProdDto{
         let newProd = {
-            name: prod.name,
-            age: prod.age
+            id:prod.id,
+            nombre: prod.nombre,
+            descripcion: prod.descripcion,
+            precio: prod.precio
         };
         this.productos.push(newProd);
         return newProd;

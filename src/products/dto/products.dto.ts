@@ -1,11 +1,15 @@
 import { IsNotEmpty } from "class-validator";
 
 export class ProdDto {
-    @IsNotEmpty()
-    name: string;
-
-    @IsNotEmpty()
-    age: number;
     
-    breed?: string;
+    @IsNotEmpty()
+    id: number;
+    @IsNotEmpty()
+    nombre: string;
+    @IsNotEmpty()
+    descripcion: string;
+    @IsNotEmpty()
+    precio:string;
+
+
 }
